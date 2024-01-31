@@ -1,8 +1,8 @@
 import React from 'react';  
-import Main2 from './src/screens/lab5/Main2';
+import Lab7 from './src/screens/lab7';
 
 const Index = () => {
-  return <Main2></Main2>;
+  return <Lab7></Lab7>;
 };
 
 export default Index; 
