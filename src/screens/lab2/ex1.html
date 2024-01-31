@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const class1 = [{
+            mssv: "PS0000",
+            name: "Nguyen Van A",
+            avgPoint: 8.9,
+            avgTraningPoint: 10,
+            status: "pass",
+        },
+        {
+            mssv: "PS0001",
+            name: "Nguyen Van B",
+            avgPoint: 4.9,
+            avgTraningPoint: 10,
+            status: "pass",
+        }
+        ];
+    const class2 = [
+        {
+            mssv: "PS0002",
+            name: "Nguyen Van C",
+            avgPoint: 4.9,
+            avgTraningPoint: 10,
+            status: "failed",
+        },
+        {
+            mssv: "PS0003",
+            name: "Nguyen Van D",
+            avgPoint: 10,
+            avgTraningPoint: 10,
+            status: "pass",
+        },
+        {
+            mssv: "PS0004",
+            name: "Nguyen Van E",
+            avgPoint: 10,
+            avgTraningPoint: 2,
+            status: "pass",
+        }
+    ]
+
+    //sắp xếp danh sách sinh viên theo avgPoint từ cao xuống thấp
+    // ... các phần tử của mỗi danh sách vào mảng mới
+    const sortedByAvgPoint = [...class1, ...class2].sort((a, b) => a.avgPoint - b.avgPoint);
+    console.log("Danh sách sinh viên theo avgPoint từ cao xuống thấp: ");
+    console.log(sortedByAvgPoint);
+
+    // sắp xếp theo danh sách sinh viên theo avgTraningPoint từ cao xuống thấp
+    const sortedByAvgTraningPoint = [...class1, ...class2].sort((a,b)=> b.avgTraningPoint - a.avgTraningPoint);
+    console.log("Danh sách sinh viên theo avgTrainingPoint từ cao xuống thấp: ");
+    console.log(sortedByAvgPoint);
+
+    //Tìm sinh viên có avgPoint và avgTrainingPoint cao nhất
+    const allStudents = [...class1, ...class2];
+    const maxAvgPointStudent = allStudents.reduce((max, student) => (student.avgPoint > max.avgPoint ? student : max));
+    const maxAvgTraningPointStudent = allStudents.reduce((max, student) => (student.avgTraningPoint > max.avgTraningPoint ? student : max));
+
+    console.log("Thông tin sinh viên có AvgPoint cao nhất: ");
+    console.log(maxAvgPointStudent);
+
+    console.log("Thông tin sinh viên có AvgTraningPoint cao nhất: ");
+    console.log(maxAvgTraningPointStudent)
+    </script>
+</body>
+</html>

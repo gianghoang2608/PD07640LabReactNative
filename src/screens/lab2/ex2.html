@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const products = [
+    { code: '001', name: 'Product A', data: 'some data' },
+    { code: '002', name: 'Product B', data: 'other data' },
+    { code: '003', name: 'Product C', data: null },
+    { code: '004', name: 'Product D' },
+];
+//fromEntries để chuyển đổi mảng các cặp khóa-giá trị thành một đối tượng JavaScript
+//code là tên thuộc tính và product là giá trị.
+const validProductsObject = Object.fromEntries(
+    products
+    //được sử dụng để loại bỏ các sản phẩm không hợp lệ khỏi mảng products
+        .filter(product => product && product.name && product.data !== undefined && product.data !== null)
+        // map() được sử dụng để biến đổi mỗi phần tử của mảng products thành một cặp khóa-giá trị
+        //product.code là khóa và product là giá trị tương ứng.
+        .map(product => [product.code, product])
+);
+//chứa các sản phẩm hợp lệ, sắp xếp theo mã sản phẩm (code) làm khóa.
+console.log(validProductsObject);
+
+    </script>
+</body>
+</html>
