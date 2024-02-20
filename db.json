@@ -1,0 +1,15 @@
+
+{
+    "users":[
+        {
+        "name": "Le Nam Trung", 
+        "birthday": "01-01-2004",
+        "id": "1"
+        },
+        {
+        "name": "Le Nam Anh", 
+        "birthday": "01-01-2005",
+        "id": "2"
+        }
+    ]
+}

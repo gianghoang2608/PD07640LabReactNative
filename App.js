@@ -1,8 +1,9 @@
 import React from 'react';  
-import Lab7 from './src/screens/lab7';
-
+import Crud from "./src/screens/lab8/CRUD";
 const Index = () => {
-  return <Lab7></Lab7>;
+  return(
+    <Crud></Crud>
+  )
 };
 
 export default Index; 
